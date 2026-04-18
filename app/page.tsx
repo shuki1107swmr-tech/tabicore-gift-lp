@@ -1,25 +1,10 @@
 import ContactForm from "./ContactForm";
 
 export default function Home() {
-  const partners = [
-    "✈️ ANA", "✈️ ANA Akindo", "✈️ JALPAK", "✈️ HIS", "✈️ 日本旅行",
-    "✈️ エアトリ", "🏨 近畿日本ツーリスト", "🏨 阪急交通社", "✈️ スカイパックツアーズ",
-    "✈️ J TRIP", "✈️ Jumbo Tours", "🏨 NEEDS TOUR",
-  ];
-
   const stores = [
     "🛍️ JAL PLAZA", "🛍️ ANA FESTA", "✈️ centrair", "🏪 7-ELEVEN",
     "🎁 銘品蔵", "👕 UNIQLO", "🛒 HANDS", "🍜 ふくや", "🍱 やまや",
     "🍬 御菓子御殿", "🏯 琉球村", "🏢 岩崎本舗", "🌺 おきなわワールド",
-  ];
-
-  const hotels = [
-    "リッチモンドホテル帯広駅前", "ホテルエミオン札幌", "ホテル日航ノースランド帯広",
-    "ホテルJALシティ東京豊洲", "ホテルトラスティ名古屋白川", "ホテルアスティア名古屋栄",
-    "プレジデントホテル博多", "ホテルセンチュリーアート", "平和台ホテル天神",
-    "リッチモンドホテル長崎思案橋", "リッチモンドホテル熊本新市街",
-    "リッチモンドホテル鹿児島天文館", "ホテル グラン コンソルト那覇",
-    "BiBi Hotel コンベンションベイ", "BiBi Hotel 国際通り",
   ];
 
   return (
@@ -29,32 +14,6 @@ export default function Home() {
         <div className="logo">tabicore <span>GIFT</span></div>
         <a href="#form" className="header-cta">無料で資料請求</a>
       </header>
-
-      {/* HERO */}
-      <div className="hero">
-        <p className="hero-badge fade-up">🎁 旅行業界向け eギフトサービス</p>
-        <p className="hero-desc fade-up fade-up-delay-1">
-          全国の空港・駅・お土産店で使えるeギフト券を、<br />
-          24時間いつでも・在庫管理不要で発行できます
-        </p>
-        <div className="free-tags fade-up fade-up-delay-1">
-          <span className="free-tag">初期費用 ¥0</span>
-          <span className="free-tag">月額費用 ¥0</span>
-          <span className="free-tag">最短1週間で開始</span>
-        </div>
-      </div>
-
-      {/* TRUST BAR */}
-      <div className="trust-bar">
-        <p className="trust-bar-label">✈️ 連携旅行会社・導入実績（一部）</p>
-        <div className="marquee-wrapper">
-          <div className="marquee-track">
-            {[...partners, ...partners].map((p, i) => (
-              <span key={i} className="trust-logo-item">{p}</span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* PROBLEM */}
       <section className="problem">
@@ -115,31 +74,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* USE CASES */}
-      <section className="usecases">
-        <div className="inner">
-          <span className="section-label">活用方法</span>
-          <h2>4つの活用シーン</h2>
-          <p className="section-desc">
-            旅行会社・ホテル・宿泊施設など多様な場面で活用されています
-          </p>
-          <div className="usecase-cards">
-            {[
-              ["🏨", "OTA手数料を削減する", "OTAで集客 → チェックイン時にeギフトカードを提供 → 次回は自社サイトで予約すると500円券プレゼント → OTA手数料8〜20%を大幅削減し、純利益に。"],
-              ["🌟", "特典付きプランで新規顧客獲得", "OTAや自社サイトにてtabicore GIFT付きプランを作成し、新規顧客を獲得。特典付きプランの顧客はリピート顧客になりやすい。"],
-              ["🍳", "朝食券を無料で電子化", "朝食券の代わりにtabicore GIFTを提供。朝食会場入口に二次元コードを設置し利用済み処理。使わなかった場合は全国のお土産店でも使えて顧客満足度UP。"],
-              ["🎖️", "メンバー会員獲得で顧客の囲い込み", "メンバー会員登録の特典にtabicore GIFTを活用。1,000円券を入会特典に設定し、JAL PLAZA・ANA FESTAなど全国店舗で使える魅力でロイヤリティ顧客を獲得。"],
-            ].map(([icon, title, desc]) => (
-              <div key={title} className="usecase-card">
-                <div className="usecase-card-icon">{icon}</div>
-                <h3>{title}</h3>
-                <p>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* RESULTS */}
       <section className="results">
         <div className="inner">
@@ -170,36 +104,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW TO USE */}
-      <section className="how">
-        <div className="inner">
-          <span className="section-label">発行方法</span>
-          <h2>お客様へのお渡しは<br />たった3ステップ</h2>
-          <p className="section-desc">
-            アプリのダウンロード不要。管理画面から簡単に操作できます。
-          </p>
-          <div className="flow-steps">
-            {[
-              ["1", "管理画面で発行設定", "利用可能開始日とチケット枚数を設定し、二次元コードを印刷するだけ。", "🖥️"],
-              ["2", "お客様へ受取用紙を渡す", "お客様はQRコードからアクセスし、そのままチケットを受け取れます。アプリ不要。", "🎫"],
-              ["3", "店舗のQRコードを読み込んで利用", "全国のお土産店・飲食店などのQRコードをスマホで読み込むだけで利用完了。", "📱"],
-            ].map(([num, title, desc, icon], idx) => (
-              <div key={num}>
-                {idx > 0 && <div className="flow-connector">↓</div>}
-                <div className="flow-step">
-                  <span className="flow-step-num">{num}</span>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{desc}</p>
-                  </div>
-                  <span className="flow-step-icon">{icon}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* MULTILANG */}
       <section className="multilang">
         <div className="inner">
@@ -212,22 +116,6 @@ export default function Home() {
           <div className="lang-tags">
             {["🇯🇵 日本語", "🇺🇸 英語", "🇰🇷 韓国語", "🇨🇳 中国語（簡体）", "🇹🇼 中国語（繁体）"].map(lang => (
               <span key={lang} className="lang-tag">{lang}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOTEL LIST */}
-      <section className="hotels">
-        <div className="inner">
-          <span className="section-label">導入ホテル一覧</span>
-          <h2>全国70施設以上に<br />導入済み</h2>
-          <p className="section-desc">北海道・東京・愛知・福岡・沖縄など全国に広がっています</p>
-        </div>
-        <div className="hotel-marquee-wrapper">
-          <div className="hotel-track">
-            {[...hotels, ...hotels].map((h, i) => (
-              <span key={i} className="hotel-tag">🏨 {h}</span>
             ))}
           </div>
         </div>
