@@ -6,25 +6,25 @@ export default function Home() {
       {/* HEADER */}
       <header>
         <div className="logo">tabicore <span>GIFT</span></div>
-        <a href="#form" className="header-cta">無料で資料請求</a>
+        <a href="#form" className="header-cta">無料で加盟申請</a>
       </header>
 
       {/* WHAT IS */}
       <section className="whatis">
         <div className="inner">
-          <span className="section-label">tabicore GIFTとは？</span>
-          <h2>旅行業界向け<br />eギフトサービス</h2>
+          <span className="section-label">tabicore GIFT 加盟店募集</span>
+          <h2>観光客・旅行者が<br />自然にあなたの店へ</h2>
           <p className="section-desc">
-            全国の空港・駅などのお土産店や飲食店など、出張や観光客に喜ばれる店舗で使える便利な電子ギフト券。
-            24時間いつでも発行し、お客様へ提供できます。
+            tabicore GIFTに加盟するだけで、全国の旅行会社・ホテルが発行したeギフト券を持つ
+            観光客・旅行者があなたのお店を訪れます。加盟費用・月額費用・決済手数料はすべて無料。
           </p>
           <div className="feature-list">
             {[
-              ["1", "全国の駅や空港などで使える！", "有効期限内なら全国どこでも利用OK。JAL PLAZA・ANA FESTA・御菓子御殿など全国約500店舗以上で利用可能。"],
-              ["2", "訪日外国人へも提供可能", "日本語・英語・韓国語・中国語（簡体・繁体）にAIで自動翻訳。メンバー会員やロイヤリティ顧客の獲得にも。"],
-              ["3", "在庫管理不要で手間いらず", "24時間いつでも発行可能な管理画面を提供。思いついた時にすぐ発行できる。"],
-              ["4", "券種は500円券・1,000円券", "初期費用・月額費用無料で発行分のみ請求。ちょっとした特典から会員特典まで自由にカスタマイズ。"],
-              ["5", "最短1週間で実施可能", "契約からスタートまでスピーディに対応。アプリのダウンロードも不要。"],
+              ["1", "来店客が自然に増える", "全国10社以上の旅行会社・70施設以上のホテルが発行するeギフト券の利用先として登録。観光客・旅行者が目的地としてあなたのお店を選びます。"],
+              ["2", "店舗側の費用は完全ゼロ", "初期費用・月額費用・決済手数料すべて無料。売上が上がるだけで、加盟に伴うコストは一切かかりません。"],
+              ["3", "QRコードだけで完結", "レジ横にQRコードを設置するだけ。お客様がスマホで読み込んで利用完了。専用端末・アプリのインストール不要。"],
+              ["4", "訪日外国人にも対応", "日本語・英語・韓国語・中国語（簡体・繁体）に自動対応。インバウンド観光客もスムーズに利用できます。"],
+              ["5", "最短1週間で加盟開始", "申し込みから加盟店登録まで最短1週間。手続きはシンプルで担当者が丁寧にサポートします。"],
             ].map(([num, title, desc]) => (
               <div key={num} className="feature-item">
                 <span className="feature-num">{num}</span>
@@ -38,18 +38,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="how">
+        <div className="inner">
+          <span className="section-label">加盟後の流れ</span>
+          <h2>加盟後は<br />たったこれだけ</h2>
+          <p className="section-desc">
+            難しい操作は一切なし。QRコードを置くだけで準備完了です。
+          </p>
+          <div className="flow-steps">
+            {[
+              ["1", "QRコードをレジ横に設置", "加盟後、専用のQRコードをお渡しします。レジ横や入口に置くだけでOK。", "📋"],
+              ["2", "観光客・旅行者が来店・利用", "eギフト券を持ったお客様がスマホでQRコードを読み込み、チケットを消化。", "📱"],
+              ["3", "売上として計上", "利用分は翌月末に精算。手数料ゼロで売上がそのまま入ります。", "💰"],
+            ].map(([num, title, desc, icon], idx) => (
+              <div key={num}>
+                {idx > 0 && <div className="flow-connector">↓</div>}
+                <div className="flow-step">
+                  <span className="flow-step-num">{num}</span>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
+                  </div>
+                  <span className="flow-step-icon">{icon}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VOICE */}
+      <section className="whatis" style={{background: "var(--bg-light)"}}>
+        <div className="inner">
+          <span className="section-label">こんなお店に選ばれています</span>
+          <h2>空港・駅・観光地の<br />お店に最適</h2>
+          <p className="section-desc">
+            旅行者・観光客が立ち寄りやすい立地のお店であれば、特に高い集客効果が見込めます。
+          </p>
+          <div className="feature-list">
+            {[
+              ["🍜", "飲食店", "空港・駅・観光地周辺のレストラン・カフェ・ラーメン店など。旅行者の食事需要を取り込めます。"],
+              ["🛍️", "お土産店・物販店", "空港内ショップ・駅ビル・観光地のお土産店。旅行の思い出として購入する需要と相性抜群。"],
+              ["🎡", "観光施設・体験施設", "テーマパーク・体験工房・観光スポットなど。旅行プランに組み込まれやすくなります。"],
+            ].map(([icon, title, desc]) => (
+              <div key={title} className="feature-item">
+                <span style={{fontSize: "28px", flexShrink: 0}}>{icon}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <div className="cta-section">
-        <h2>まずは無料で<br />資料請求・ご相談</h2>
-        <p>初期費用・月額費用ゼロ。発行分のみのシンプルな料金体系。</p>
-        <a href="#form" className="cta-btn">今すぐ無料で資料請求する</a>
-        <p className="cta-note">最短1週間で導入開始 · 担当者がご対応します</p>
+        <h2>まずは無料で<br />加盟申請・ご相談</h2>
+        <p>加盟費用・月額費用・決済手数料すべてゼロ。リスクなしで始められます。</p>
+        <a href="#form" className="cta-btn">今すぐ無料で加盟申請する</a>
+        <p className="cta-note">最短1週間で加盟開始 · 担当者がご対応します</p>
       </div>
 
       {/* FORM */}
       <section className="form-section" id="form">
         <div className="inner">
-          <span className="section-label" style={{display: "block", textAlign: "center", marginBottom: "8px"}}>資料請求・お問い合わせ</span>
+          <span className="section-label" style={{display: "block", textAlign: "center", marginBottom: "8px"}}>加盟申請・お問い合わせ</span>
           <h2 style={{textAlign: "center"}}>無料でご相談ください</h2>
           <p className="section-desc" style={{textAlign: "center"}}>担当者より2営業日以内にご連絡いたします</p>
           <ContactForm />
