@@ -68,32 +68,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VOICE */}
-      <section className="whatis" style={{background: "var(--bg-light)"}}>
-        <div className="inner">
-          <span className="section-label">こんなお店に選ばれています</span>
-          <h2>空港・駅・観光地の<br />お店に最適</h2>
-          <p className="section-desc">
-            旅行者・観光客が立ち寄りやすい立地のお店であれば、特に高い集客効果が見込めます。
-          </p>
-          <div className="feature-list">
-            {[
-              ["🍜", "飲食店", "空港・駅・観光地周辺のレストラン・カフェ・ラーメン店など。旅行者の食事需要を取り込めます。"],
-              ["🛍️", "お土産店・物販店", "空港内ショップ・駅ビル・観光地のお土産店。旅行の思い出として購入する需要と相性抜群。"],
-              ["🎡", "観光施設・体験施設", "テーマパーク・体験工房・観光スポットなど。旅行プランに組み込まれやすくなります。"],
-            ].map(([icon, title, desc]) => (
-              <div key={title} className="feature-item">
-                <span style={{fontSize: "28px", flexShrink: 0}}>{icon}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <div className="cta-section">
         <h2>まずは無料で<br />加盟申請・ご相談</h2>
