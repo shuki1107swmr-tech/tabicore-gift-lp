@@ -38,23 +38,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MULTILANG */}
-      <section className="multilang">
-        <div className="inner">
-          <span className="section-label">訪日外国人対応</span>
-          <h2>AIで自動翻訳、<br />4言語に対応</h2>
-          <p className="section-desc">
-            日本語・英語・韓国語・中国語（簡体・繁体）に自動翻訳。<br />
-            訪日インバウンド客にも喜ばれるギフト体験を提供。
-          </p>
-          <div className="lang-tags">
-            {["🇯🇵 日本語", "🇺🇸 英語", "🇰🇷 韓国語", "🇨🇳 中国語（簡体）", "🇹🇼 中国語（繁体）"].map(lang => (
-              <span key={lang} className="lang-tag">{lang}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <div className="cta-section">
         <h2>まずは無料で<br />資料請求・ご相談</h2>
