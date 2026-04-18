@@ -9,36 +9,6 @@ export default function Home() {
         <a href="#form" className="header-cta">無料で資料請求</a>
       </header>
 
-      {/* PROBLEM */}
-      <section className="problem">
-        <div className="inner">
-          <span className="section-label">こんな課題ありませんか？</span>
-          <h2>旅行業界の特典・ギフト、<br />こんなお悩みはありませんか？</h2>
-          <div className="divider" />
-          <ul className="problem-list">
-            {[
-              ["1", "お客様に特典を提供したいが、目新しいサービスがない", "いつもお決まりのギフト券になってしまい、新鮮さがない"],
-              ["2", "金券などでの在庫管理が面倒", "金券の管理は社内でも稟議が通りづらく、進めにくい"],
-              ["3", "コストをかけたくない", "少ない予算で試しながら進めたい"],
-              ["4", "すぐに実施したい、急いでいる", "近々のキャンペーンを予定しており探している"],
-            ].map(([num, title, sub]) => (
-              <li key={num}>
-                <span className="problem-num">{num}</span>
-                <div>
-                  <strong>{title}</strong>
-                  <br /><span style={{fontSize: "12px", color: "var(--text-sub)"}}>ex) {sub}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <p className="problem-arrow">↓</p>
-          <div className="problem-solution">
-            tabicore GIFTなら、<strong>初期費用・月額費用ゼロ</strong>で<br />
-            最短1週間から始められます！
-          </div>
-        </div>
-      </section>
-
       {/* WHAT IS */}
       <section className="whatis">
         <div className="inner">
