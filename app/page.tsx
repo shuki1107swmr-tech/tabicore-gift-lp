@@ -1,12 +1,6 @@
 import ContactForm from "./ContactForm";
 
 export default function Home() {
-  const stores = [
-    "🛍️ JAL PLAZA", "🛍️ ANA FESTA", "✈️ centrair", "🏪 7-ELEVEN",
-    "🎁 銘品蔵", "👕 UNIQLO", "🛒 HANDS", "🍜 ふくや", "🍱 やまや",
-    "🍬 御菓子御殿", "🏯 琉球村", "🏢 岩崎本舗", "🌺 おきなわワールド",
-  ];
-
   return (
     <>
       {/* HEADER */}
@@ -70,36 +64,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RESULTS */}
-      <section className="results">
-        <div className="inner">
-          <span className="section-label">導入実績</span>
-          <h2>全国約500店舗以上が<br />すでに導入済み</h2>
-          <div className="divider" />
-          <div className="result-numbers">
-            {[
-              ["500", "+", "全国利用可能\n店舗数"],
-              ["10", "社+", "連携旅行会社\n数"],
-              ["70", "施設+", "導入ホテル・\n宿泊施設数"],
-              ["¥", "0", "店舗側の\n全費用"],
-            ].map(([n, unit, label]) => (
-              <div key={label} className="result-number-card">
-                <div className="num">{n}<span>{unit}</span></div>
-                <div className="label">{label.split("\n").map((l, i) => <span key={i}>{l}{i === 0 && <br />}</span>)}</div>
-              </div>
-            ))}
-          </div>
-          <p className="result-logos-title">導入実績店舗・連携パートナー（一部）</p>
-          <div className="logo-marquee-wrapper">
-            <div className="logo-track">
-              {[...stores, ...stores].map((s, i) => (
-                <span key={i} className="logo-tag">{s}</span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
