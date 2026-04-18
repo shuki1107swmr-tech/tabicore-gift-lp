@@ -38,36 +38,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="how">
-        <div className="inner">
-          <span className="section-label">加盟後の流れ</span>
-          <h2>加盟後は<br />たったこれだけ</h2>
-          <p className="section-desc">
-            難しい操作は一切なし。QRコードを置くだけで準備完了です。
-          </p>
-          <div className="flow-steps">
-            {[
-              ["1", "QRコードをレジ横に設置", "加盟後、専用のQRコードをお渡しします。レジ横や入口に置くだけでOK。", "📋"],
-              ["2", "観光客・旅行者が来店・利用", "eギフト券を持ったお客様がスマホでQRコードを読み込み、チケットを消化。", "📱"],
-              ["3", "売上として計上", "利用分は翌月末に精算。手数料ゼロで売上がそのまま入ります。", "💰"],
-            ].map(([num, title, desc, icon], idx) => (
-              <div key={num}>
-                {idx > 0 && <div className="flow-connector">↓</div>}
-                <div className="flow-step">
-                  <span className="flow-step-num">{num}</span>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{desc}</p>
-                  </div>
-                  <span className="flow-step-icon">{icon}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <div className="cta-section">
         <h2>まずは無料で<br />加盟申請・ご相談</h2>
