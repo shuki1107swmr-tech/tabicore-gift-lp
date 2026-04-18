@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 
+declare function gtag(...args: unknown[]): void;
+
 const FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSdhxMRAW9vEcH2FyY80q9DGwV8V8qok1SY73X4gMvwlFqGR6g/formResponse";
 
@@ -45,6 +47,14 @@ export default function ContactForm() {
         body: body.toString(),
       });
       setSubmitted(true);
+      // GA4 フォーム送信イベント
+      if (typeof gtag !== "undefined") {
+        gtag("event", "generate_lead", {
+          event_category: "form",
+          event_label: "contact_form",
+          industry: values.industry,
+        });
+      }
     } catch {
       setError(true);
     } finally {
